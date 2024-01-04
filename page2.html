@@ -53,14 +53,18 @@
     </style>
     <script>
         //var amount = location.search.split("=")[1];
-        var newamt = parseInt(document.getElementById("newamt").value);
+        
         
         function addamt() {
+        var amount = parseInt(document.getElementById("output").value);
+        var newamt = parseInt(document.getElementById("newamt").value);
         amount = amount + newamt;
         document.getElementById("output").innerHTML = amount;
         }
 
         function payamt() {
+        var amount = parseInt(document.getElementById("output").value);
+        var newamt = parseInt(document.getElementById("newamt").value);
         amount = amount - newamt;
         document.getElementById("output").innerHTML = amount;
         }
