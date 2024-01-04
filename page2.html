@@ -52,29 +52,24 @@
         
     </style>
     <script>
-        var amount = location.search.split("=")[1];
-        
-        
-        function addamt(amount) {
-        var amount = parseInt(document.getElementById("output").value);
+        var amount = location.search.split("=")[1]; 
+
+        function showamt() {
+        document.getElementById("output").innerHTML = amount;   
+        }
+
+        function addamt() {
         var newamt = parseInt(document.getElementById("newamt").value);
         amount = amount + newamt;
-        showamt(amount);
-        //document.getElementById("output").innerHTML = amount;
+        document.getElementById("output").innerHTML = amount;        
         }
 
-        function payamt(amount) {
-        var amount = parseInt(document.getElementById("output").value);
+        function payamt() {
         var newamt = parseInt(document.getElementById("newamt").value);
         amount = amount - newamt;
-        showamt(amount);
-        //document.getElementById("output").innerHTML = amount;
-        }
-
-        function showamt(amount) {
-        //var amount = location.search.split("=")[1];
         document.getElementById("output").innerHTML = amount;
         }
+
     </script>
 </head>
 <body>
