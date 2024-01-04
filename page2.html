@@ -53,14 +53,14 @@
     </style>
     <script>
         var amount = parseInt(location.search.split("=")[1]).value;
+        var newamt = parseInt(document.getElementById("newamt").value);
+        
         function addamt() {
-        var newamtp = parseInt(document.getElementById("newamt").value);
-        amount = amount + newamtp;
+        amount = amount + newamt;
         document.getElementById("output").innerHTML = amount;
         }
 
         function payamt() {
-        var newamt = parseInt(document.getElementById("newamt").value);
         amount = amount - newamt;
         document.getElementById("output").innerHTML = amount;
         }
