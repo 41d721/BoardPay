@@ -52,7 +52,7 @@
         
     </style>
     <script>
-        var amount = location.search.split("=")[1];
+        //var amount = location.search.split("=")[1];
         var newamt = parseInt(document.getElementById("newamt").value);
         
         function addamt() {
@@ -66,7 +66,7 @@
         }
 
         function showamt() {
-        
+        var amount = location.search.split("=")[1];
         document.getElementById("output").innerHTML = amount;
         }
     </script>
