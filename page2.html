@@ -52,7 +52,7 @@
         
     </style>
     <script>
-        var amount = location.search.split("=")[1];
+        var amount = parseInt(location.search.split("=")[1]).value;
         function addamt() {
         var newamt = parseInt(document.getElementById("newamt").value);
         amount = amount + newamt;
@@ -83,7 +83,6 @@
     <form>
         <div class="div-4">Enter Amount</div>
         <input class="div-5" type="number" id="newamt" placeholder="Enter Amount" name="startingAmount" required><br>
-        <br>
         <button type="button" onclick="addamt()">Credit</button> 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                       
         <button type="button" onclick="payamt()">Pay</button> 
