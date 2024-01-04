@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to BoardPay</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-image: url("https://github.com/41d721/BoardPay/blob/main/pg1_bg.png?raw=true");
+            background-size: cover;
+            color: rgb(27, 27, 27);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+      
+        input[type=text], input[type=number], button {
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .div {
+          border-radius: 26px;
+          align-self: normal;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 40px 28px;
+        }
+        .div-4 {
+          justify-content: center;
+          color: #fff;
+          text-align: center;
+          margin-top: 26px;
+          white-space: nowrap;
+          font: 700 16px IBM Plex Serif, sans-serif;
+        }
+        .div-5 {
+          border-radius: 10px;
+          background-color: #d9d9d9;
+          align-self: stretch;
+          display: flex;
+          margin-top: 4px;
+          height: 23px;
+          flex-direction: column;
+        }
+        
+    </style>
+    <script>
+      function linkto() {
+      const amount = parseInt(document.getElementById("iniamt").value);;
+      location.href = "./p2.html?amount=" + amount;
+    }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <br>
+    <br><br><br>
+    <h1>Welcome<br>To<br>BoardPay</h1>
+    <br>
+    <pre style="color: yellow;">A Simple Web App to Replace<br>Cash/Coins While Playing Board<br>Games.</pre>
+    <div class="div">
+    <form>
+        <div class="div-4">Enter Starting Amount</div>
+        <input class="div-5" type="number" id="iniamt" placeholder="Enter Starting Amount" name="startingAmount" required><br>
+
+        <button type="button" onclick="linkto()">START</button> 
+    </form> 
+    <br>
+    </div>
+    <br>
+
+</div>
+
+</body>
+</html>

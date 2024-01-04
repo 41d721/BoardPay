@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoardPay</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-image: url("https://github.com/41d721/BoardPay/blob/main/pg2_bg.png?raw=true");
+            background-size: cover;
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        input[type=text], input[type=number], button {
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .div {
+          border-radius: 26px;
+          align-self: stretch;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 40px 28px;
+        }
+        .div-4 {
+          justify-content: center;
+          color: #fff;
+          text-align: center;
+          margin-top: 26px;
+          white-space: nowrap;
+          font: 700 16px IBM Plex Serif, sans-serif;
+        }
+        .div-5 {
+          border-radius: 10px;
+          background-color: #d9d9d9;
+          align-self: stretch;
+          display: flex;
+          margin-top: 4px;
+          height: 23px;
+          flex-direction: column;
+        }
+        .container h1{
+            color: aquamarine;
+        }
+        
+    </style>
+    <script>
+        var amount = 5;//location.search.split("=")[1];
+        function addamt() {
+        var newamt = parseInt(document.getElementById("newamt").value);
+        amount = amount + newamt;
+        document.getElementById("output").innerHTML = amount;
+        }
+
+        function payamt() {
+        var newamt = parseInt(document.getElementById("newamt").value);
+        amount = amount - newamt;
+        document.getElementById("output").innerHTML = amount;
+        }
+
+        function showamt() {
+        
+        document.getElementById("output").innerHTML = amount;
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <br>
+    <br><br><br><br>
+    <button type="button" onclick="showamt()">Show Balance</button>
+    <br><br><br><br>
+    <h1>Your Balance is, </h1><h1 id="output"></h1>
+    <div class="div">
+    <form>
+        <div class="div-4">Enter Amount</div>
+        <input class="div-5" type="number" id="newamt" placeholder="Enter Amount" name="startingAmount" required><br>
+        <br>
+        <button type="button" onclick="addamt()">Credit</button> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                       
+        <button type="button" onclick="payamt()">Pay</button> 
+    </form> 
+    <br>
+    </div>
+    <br>
+
+</div>
+
+</body>
+</html>
