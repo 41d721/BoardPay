@@ -60,7 +60,7 @@
 
         function addamt() {
         var newamt = parseInt(document.getElementById("newamt").value);
-        amount = amount + newamt;
+        amount = parseInt(amount) + newamt;
         document.getElementById("output").innerHTML = amount;        
         }
 
