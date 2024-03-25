@@ -5,4 +5,4 @@ BoardPay is compatible with most popular board games, such as Monopoly, The Game
 BoardPay is easy, fast, and fun.
 
 Use the this link to try out this Project:
-https://raw.githack.com/41d721/BoardPay/main/Intro.html
+[BoardPay](https://41vi4p.github.io/BoardPay/Intro.html)
